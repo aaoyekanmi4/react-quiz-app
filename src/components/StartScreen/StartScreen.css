@@ -1,0 +1,36 @@
+
+h1 {
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+.start {
+    font-size: 28px;
+}
+
+.start {
+    background: transparent;
+    cursor: pointer;
+    border: 1px solid orange;
+    color: white;
+}
+
+.start-quiz, .end-quiz {
+    background-color: #2b2a38;
+    border: 2px solid white;
+    border-radius: 3px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 15%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    color: white;
+}
+
+@media (min-width: 860px) {
+    .start-quiz {
+        width: 50%;
+    }
+}
