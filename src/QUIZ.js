@@ -42,33 +42,30 @@ const QUIZ = [{
     topic: "Array.prototype.some()"
   },
 
-    {question: "How can I console.log() the name of each cow?", 
+    {question: "What array method can I use to add a last name to each family member?", 
     
-    codeBox: "const milkcows = ['Daisy','Mary','Bertha','Sue']",
+    codeBox: "const family = ['Bill','Mary','John','Susie']",
     answers: [
-      <span>  <pre>for (let cow in milkcows) {'{'} </pre><pre>  console.log(cow)</pre><pre>{'}'} </pre></span>, 
-      <span>  <pre>for (let cow on milkcows) {'{'} </pre><pre>  console.log(cow)</pre><pre>{'}'} </pre></span>, 
-      <span> <pre>for (let milkcow of farm){'{'} </pre><pre>console.log(cow)</pre><pre>{'}'} </pre></span>, 
-        <span><pre>for (let cow of milkcows){'{'} </pre><pre>console.log(cow)</pre><pre>{'}'} </pre></span> 
+            "family.reduce(firstName => firstName + ' Williams')",
+            "family.map(firstName => firstName + ' Williams')",
+            "family.sort(firstName => firstName + ' Williams')",
+            "family.append(firstName => firstName + ' Williams')",
+            
       ], 
-    correctAnswer: <span><pre>for (let cow of milkcows){'{'} </pre><pre>console.log(cow)</pre><pre>{'}'} </pre></span> ,
-    documentation:"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of",
-    topic: "for ...of"},
-    {question: "Which array method's implementation is closest to the code below?", 
+    correctAnswer:"family.map(firstName => firstName + ' Williams')",
+    documentation:"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map",
+    topic: "Array.prototype.map()"},
+    {question: "Which array method has the highest runtime complexity?", 
     
-    codeBox: <><pre>function unknown(arr, callback){'{'}</pre>
-      <pre>  {`for (var i = 0; i < arr.length; i++)`}{'{'}</pre>
-      <pre>  callback(arr[i],i, arr)</pre>
-    <pre>{'}'};</pre>
-    <pre>}</pre></>,
+
     answers: [
-        "map", 
-        "reduce",  
-        "all", 
-        "forEach", 
+        "push", 
+        "pop",  
+        "shift", 
+        "They are all the same", 
       ], 
-    correctAnswer: "forEach",
-    documentation:"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach",
+    correctAnswer: "shift",
+    documentation:"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift",
     topic: "forEach"}
   
     

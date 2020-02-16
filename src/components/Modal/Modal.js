@@ -11,16 +11,18 @@ const Modal =(props) => {
 
     return ReactDOM.createPortal(
       <div 
-        className="modal-background"> 
+        className="modal-background"
+       > 
         <div  
           onClick ={(e) => e.stopPropagation()} 
           className="modal-box">
           {props.modalMessage}
           Score: {props.score}/{props.total}
-        
+          {props.total === (props.currentQuestion +1) ? <p class="end"><button class="end" onClick={props.changeQuestion}>View Results</button></p>:
           <div className="next-holder">
+            
           <button class="next" onClick={props.changeQuestion}>Next</button>
-          </div>
+          </div>}
         </div>
       </div>, document.getElementById('modal')
     );

@@ -18,7 +18,7 @@ const Question = props => {
             required
           />
 
-          <label for={index}>
+          <label htmlFor={index}>
             <code className="prettyprint lang-js prettyprinted">{answer}</code>
           </label>
         </div>
@@ -43,20 +43,22 @@ const Question = props => {
           </span>
 
           <p class="question">{current.question}</p>
+          {current.codeBox ?
           <p class="arr-box">
-            {current.codeBox ?
+            
             <code className="question-content prettyprint lang-js prettyprinted">
               {current.codeBox}
-            </code>
+            </code></p>
             :
             ''}
-          </p>
+            <input type="submit" class="answer-button" />
+        
           <section class="answers-container">
             {answersHTML}
             <h2 class="section-title"></h2>
           </section>
           
-          <input type="submit" class="answer-button" />
+          
         </fieldset>
       </form>
     </section>

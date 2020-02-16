@@ -2,7 +2,8 @@
   
 .modal-background {
     width:100%; 
-    height:100vh;  
+   height:100vh;
+   overflow-y: hidden;
     position:absolute; 
     left:0; 
     top:0; 
@@ -10,17 +11,17 @@
     z-index:10;
 }
 .modal-box {
-    width:30%; 
-    height:50%;  
+    width:600px; 
+    height:fit-content;
     background:white; 
     border-radius:10px; 
     position:absolute;  
     z-index:100; 
     left:50%;
     top:50%; 
-    margin:-10% -15%;
+    margin:-150px -300px;
     font-family:'Open Sans', sans-serif;
-    font-weight:700px;
+    font-weight:700;
     text-align:center;
     font-size:20px;
 }
@@ -29,13 +30,28 @@
     
    
 }
+button.end{
+    background:rgb(92, 92, 223);
+    cursor: pointer;
+    border: 1px solid black;
+}
+.end{
+    text-align:center;
+    font-size:22px;
+    
+
+    color:white;
+
+}
 .correct {
     color:green;
-    margin-bottom:20px;
+    margin-bottom:60px;
+    margin-top:25px;
 }
 .incorrect {
     color:red;
-    margin-bottom:20px;
+    margin-bottom:40px;  
+    margin-top:25px
 }
 .next{
     color: #2b2a38;
@@ -47,5 +63,13 @@
     
  
     
+}
+@media (max-width:600px) {
+    .modal-box {
+        width:100%;
+        top:15%;
+        left:0;
+        margin:0;
+    }
 }
 

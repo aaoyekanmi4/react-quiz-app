@@ -28,7 +28,8 @@ function App() {
       toggleModal();
       setCurrentQuestion(prev => prev + 1);
     } else {
-      return;
+      toggleModal();
+      changeView();
     }
   };
   const handleSelection = changeEvent => {
@@ -58,7 +59,7 @@ function App() {
         </div>
      
       )
-      setReviewTopics(prev => prev.concat(quiz[currentQuestion].topic))
+      setReviewTopics(prev => prev.concat(<li key={quiz[currentQuestion].topic} className="review-topic"><a target ="_blank" href={quiz[currentQuestion].documentation}>{quiz[currentQuestion].topic}</a></li>))
    
       toggleModal();
     }
@@ -73,6 +74,13 @@ function App() {
       }
     });
   };
+  const restart = () => {
+    setCurrentQuestion(0);
+    setScore(0);
+    setReviewTopics([]);
+    setStatus(1);
+  }
+  
   const showView = () => {
     if (status === 0) {
       return <StartScreen changeView={changeView} />;
@@ -89,7 +97,7 @@ function App() {
         />
       );
     } else {
-      return <EndScreen />;
+      return <EndScreen score={score} reviewTopics={reviewTopics} quiz={quiz} restart={restart} />;
     }
   };
   return (
@@ -103,6 +111,7 @@ function App() {
         modalMessage={modalMessage}
         score={score}
         total={quiz.length}
+        currentQuestion={currentQuestion}
       />
     </div>
   );

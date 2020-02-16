@@ -45,9 +45,7 @@ ul {
     color: white;
 
 }
-.end-quiz{
-    display:none;
-}
+
 .start{
 background:transparent;
 cursor: pointer;
@@ -58,7 +56,7 @@ color:white;
 .start-align {
     text-align: center;
 }
-.start-quiz, .end-quiz{
+.start-quiz {
     background-color: #2b2a38;
     border: 2px solid white;
     border-radius: 3px;
@@ -74,20 +72,7 @@ color:white;
 }
 
 
-button.end{
-    background:rgb(92, 92, 223);
-    cursor: pointer;
-    border: 1px solid black;
-}
-.end{
-    display: none;
-    text-align:center;
-    font-size:22px;
-    
 
-    color:white;
-
-}
 button {
     cursor:pointer;
 }
@@ -124,7 +109,7 @@ margin:10px 0;
     width: 100%;
     height:fit-content;
     margin: 0 auto;
-    margin-top:10%;
+    overflow-y: hidden;
    
     
 }
@@ -192,10 +177,7 @@ h3{
     .start-quiz{
         width:50%;
     }
-    .end-quiz {
-        width:50%;
-        margin-top:5%;
-    }
+  
     .quiz{
         width:60%;
     }

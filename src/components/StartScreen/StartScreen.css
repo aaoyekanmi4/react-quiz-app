@@ -16,7 +16,7 @@ h1 {
     color: white;
 }
 
-.start-quiz, .end-quiz {
+.start-quiz {
     background-color: #2b2a38;
     border: 2px solid white;
     border-radius: 3px;
