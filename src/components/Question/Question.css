@@ -94,18 +94,7 @@ button {
 .start{
     font-size:28px;
 }
-.next{
-    color: #2b2a38;
-    background: #1dd4cb;
-    font-size: 22px;
-    border-color: steelblue;
-    cursor: pointer;
-    float:right;
-    position: relative;
-    top: 10px;
-    display: none;
-    
-}
+
 
 
 li {
@@ -155,16 +144,7 @@ h3{
   
 
 }
-.correct{
-    border:3px solid green;
-    
-    background-color: green;
-    color:white;
-    width:fit-content;
-    padding:0px;
-    margin:0px;
-    
-}
+
  .current{
     color: #fffdfa;
         
@@ -186,13 +166,6 @@ h3{
     }
    
 
-.correct-answer{
-   
-
-    padding:2px;
-    height:85px;
-    margin-top:0px;  
-} 
 .answer{
     border:1px solid #1dd4cb;
     width:100%;
@@ -200,18 +173,7 @@ h3{
 
     
 }
-    .wrong{
-        border:3px solid red;
-        
-        background-color: red;
-        color:white;
-        width:fit-content;
-        padding:0px;
-        margin:0px;
-        
-        
-        
-    }
+    
 
 
 .answer-button{
@@ -254,7 +216,7 @@ h3{
     .quiz-content{
         height:-webkit-fill-available;
         width: 75%;
-        padding: 25px 25px 25px 25px;
+        padding: 25px;
     
     }
   .question {

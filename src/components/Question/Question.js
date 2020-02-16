@@ -3,38 +3,34 @@ import "./Question.css";
 const Question = props => {
   let current = props.quiz[props.currentQuestion];
 
-  let answersHTML = props.quiz[props.currentQuestion].answers.map(
+  let answersHTML = current.answers.map(
     (answer, index) => (
       <div class="answer ">
         <div class="answer-content">
           <input
             type="radio"
             name="answer"
-            id={`${index}`}
+            key={index}
+            id={index}
             value={`${answer}`}
+            onChange={props.handleSelection}
+            checked={props.selectedAnswer ===`${answer}`}
             required
           />
 
-          <label for={`${index}`}>
-            <code className="prettyprint lang-js prettyprinted">{`${answer}`}</code>
+          <label for={index}>
+            <code className="prettyprint lang-js prettyprinted">{answer}</code>
           </label>
         </div>
       </div>
     )
   );
- const checkAnswer =(userAnswer)=> {
-    if (current.correctIndex === userAnswer) {
-        return 'correct';
-    }
-    else {
-        return 'incorrect'
-    }
- }
+
   return (
     <section class="quiz-content">
       <h1 class="section-title">Quiz Content</h1>
 
-      <form>
+      <form onSubmit ={props.checkAnswer}>
         <fieldset
           class="question-field"
           data-question-index={props.currentQuestion}
@@ -48,16 +44,19 @@ const Question = props => {
 
           <p class="question">{current.question}</p>
           <p class="arr-box">
+            {current.codeBox ?
             <code className="question-content prettyprint lang-js prettyprinted">
               {current.codeBox}
             </code>
+            :
+            ''}
           </p>
           <section class="answers-container">
             {answersHTML}
             <h2 class="section-title"></h2>
           </section>
-          <button class="next" onClick={props.changeQuestion}>Next</button>
-          <input type="submit" class="answer-button" onClick={props.toggleModal}/>
+          
+          <input type="submit" class="answer-button" />
         </fieldset>
       </form>
     </section>

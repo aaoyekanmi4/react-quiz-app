@@ -4,9 +4,9 @@ import React from 'react';
 
 const QUIZ = [{
     question: "Which iterative method returns a new array with ALL values of the example array greater than 6?", 
-    codeBox: "const numbers = [5,6,7,8,9, 10]",
+    codeBox: "const numbers = [5,6,7,8,9,10]",
     answers: ["numbers.filter(num => num > 6);", "numbers.find(num => num > 6);", "numbers.reduce(num => num > 6);", "numbers.map(num => num > 6);"], 
-    correctIndex: 0, 
+    correctAnswer: "numbers.filter(num => num > 6);", 
     documentation:"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter",
     topic: "Array.prototype.filter()"
     },
@@ -14,16 +14,16 @@ const QUIZ = [{
     {question: "Which method will NOT mutate the example array?", 
     codeBox: "const numbers = [11,12,13,14,15]",
     answers: ["numbers.pop();", "numbers.shift();", "numbers.push(16);", "numbers.concat(16);"], 
-    correctIndex: 3,
+    correctAnswer: "numbers.concat(16);",
     documentation:"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat",
     topic: "Array.prototype.concat()"
   },
   
     {question: "Which method can I use to add an element to the front of an array?", 
     
-    codeBox: "",
-    answers: ["push;", "shift;", "pop", "unshift;"], 
-    correctIndex: 3,
+    codeBox: "const numbers = [5,6,7,8,9,10]",
+    answers: ["push", "shift", "pop", "unshift"], 
+    correctAnswer: "unshift",
     documentation:"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift",
     topic: "Array.prototype.unshift()"
   },
@@ -37,7 +37,7 @@ const QUIZ = [{
         "numbers.some(num => num > 2);", 
         "numbers.every(num => num > 2);"
       ], 
-    correctIndex: 2,
+    correctAnswer: "numbers.some(num => num > 2);",
     documentation:"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some",
     topic: "Array.prototype.some()"
   },
@@ -51,7 +51,7 @@ const QUIZ = [{
       <span> <pre>for (let milkcow of farm){'{'} </pre><pre>console.log(cow)</pre><pre>{'}'} </pre></span>, 
         <span><pre>for (let cow of milkcows){'{'} </pre><pre>console.log(cow)</pre><pre>{'}'} </pre></span> 
       ], 
-    correctIndex: 3,
+    correctAnswer: <span><pre>for (let cow of milkcows){'{'} </pre><pre>console.log(cow)</pre><pre>{'}'} </pre></span> ,
     documentation:"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of",
     topic: "for ...of"},
     {question: "Which array method's implementation is closest to the code below?", 
@@ -65,9 +65,9 @@ const QUIZ = [{
         "map", 
         "reduce",  
         "all", 
-        "forEach", , 
+        "forEach", 
       ], 
-    correctIndex: 3,
+    correctAnswer: "forEach",
     documentation:"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach",
     topic: "forEach"}
   
